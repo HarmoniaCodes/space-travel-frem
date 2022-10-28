@@ -90,14 +90,14 @@
 
   /* Background images for Desktop */
   .home {
-      background-image: url('/starter-code/assets/home/background-home-desktop.jpg');
+      background-image: url('assets/home/background-home-desktop.jpg');
   }
   .destination {
-    background-image: url('/starter-code/assets/destination/background-destination-desktop.jpg');
+    background-image: url('assets/destination/background-destination-desktop.jpg');
 }
 
 .crew {
-    background-image: url('/starter-code/assets/crew/background-crew-desktop.jpg');
+    background-image: url('assets/crew/background-crew-desktop.jpg');
 }
 
 
@@ -108,15 +108,15 @@
       }
       .home {
         background-position: center center;
-        background-image: url('/starter-code/assets/home/background-home-mobile.jpg');
+        background-image: url('assets/home/background-home-mobile.jpg');
     }
     .destination {
         background-position: center center;
-        background-image: url('/starter-code/assets/destination/background-destination-mobile.jpg');
+        background-image: url('assets/destination/background-destination-mobile.jpg');
     }
     .crew {
         background-position: center center;
-        background-image: url('starter-code/assets/crew/background-crew-mobile.jpg');
+        background-image: url('assets/crew/background-crew-mobile.jpg');
     }
 
   }
@@ -128,15 +128,15 @@
       }
       .home {
           background-position: center center;
-          background-image: url('/starter-code/assets/home/background-home-tablet.jpg');
+          background-image: url('assets/home/background-home-tablet.jpg');
       }
   .destination {
     background-position: center center;
-    background-image: url('/starter-code/assets/destination/background-destination-tablet.jpg');
+    background-image: url('assets/destination/background-destination-tablet.jpg');
 }
 .crew {
     background-position: center center;
-    background-image: url('/starter-code/assets/crew/background-crew-tablet.jpg');
+    background-image: url('assets/crew/background-crew-tablet.jpg');
 }
   }
 /* Background settings for tablet */
@@ -147,7 +147,7 @@
 
     .destination {
         background-position: center center;
-        background-image: url('/starter-code/assets//destination/background-destination-tablet.jpg');
+        background-image: url('assets//destination/background-destination-tablet.jpg');
     }
 }
 
@@ -421,7 +421,7 @@ color: hsl(var(--clr-white) / .4);
 }
 
 .mobile-nav-toggle[aria-expanded="true"] {
-    background-image: url('/starter-code/assets/shared/icon-close.svg');
+    background-image: url('assets/shared/icon-close.svg');
 }
 
 
@@ -456,7 +456,7 @@ color: hsl(var(--clr-white) / .4);
           top: 2rem;
           background: transparent;
           border: none;
-          background-image: url('/starter-code/assets/shared/icon-hamburger.svg');
+          background-image: url('assets/shared/icon-hamburger.svg');
           background-repeat: no-repeat;
           width: 1.5rem;
           aspect-ratio: 1;
