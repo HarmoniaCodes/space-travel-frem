@@ -14,6 +14,7 @@
   <!-- Custom CSS-->
   <link rel="stylesheet" href="index.css">
   <script src="index.js" defer></script>
+  <script src="carousel.js" defer></script>
   <title>Frontend Mentor | Space tourism website</title>
 </head>
 
@@ -31,9 +32,9 @@
       <ul id="primary-navigation" data-visible="false" class="primary-navigation underline-indicators flex">
         <li><a class="ff-sans-cond uppercase txt-white letter-spacing-2" href="index.html"><span
               aria-hidden="true">00</span>Home</a>
-        <li class="active"><a class="ff-sans-cond uppercase txt-white letter-spacing-2" href="destination-moon.html"><span
+        <li class="active"><a class="ff-sans-cond uppercase txt-white letter-spacing-2" href="destination.html"><span
               aria-hidden="true">01</span>Destination</a>
-        <li><a class="ff-sans-cond uppercase txt-white letter-spacing-2" href="crew-commander.html"><span
+        <li><a class="ff-sans-cond uppercase txt-white letter-spacing-2" href="crew.html"><span
               aria-hidden="true">02</span>Crew</a>
         <li><a class="ff-sans-cond uppercase txt-white letter-spacing-2" href="#"><span
               aria-hidden="true">03</span>Technology</a>
@@ -41,32 +42,41 @@
     </nav>
   </header>
   <main id="main" class="grid-container grid-container--destination">
+    
       <h1 class="numbered-title"><span aria-hidden="true">01</span>Pick your destination</a></h1>
-      <img src="/starter-code/assets/destination/image-moon.png" alt="The Moon">
+      <!-- Moon -->
+      
+      <picture id="dest-img">
+        <source srcset="assets/destination/image-moon.webp" type="image/webp">
+        <img src="assets/destination/image-moon.png" alt="the moon">
+      </picture>
     <!-- Tab list -->
       <div class="tab-list underline-indicators flex">
-        <button aria-selected="true" class="uppercase ff-sans-cond txt-accent letter-spacing-2">Moon</button>
-        <button aria-selected="false" class="uppercase ff-sans-cond txt-accent letter-spacing-2">Mars</button>
-        <button aria-selected="false" class="uppercase ff-sans-cond txt-accent letter-spacing-2">Europa</button>
-        <button aria-selected="false" class="uppercase ff-sans-cond txt-accent  letter-spacing-2">Titan</button>
+        <button onclick="loadMoon()" aria-selected="true" class="btn-tab uppercase ff-sans-cond txt-accent letter-spacing-2">Moon</button>
+        <button onclick="loadMars()" aria-selected="false" class="btn-tab uppercase ff-sans-cond txt-accent letter-spacing-2">Mars</button>
+        <button onclick="loadEuropa()" aria-selected="false" class="btn-tab uppercase ff-sans-cond txt-accent letter-spacing-2">Europa</button>
+        <button onclick="loadTitan()" aria-selected="false" class="btn-tab uppercase ff-sans-cond txt-accent  letter-spacing-2">Titan</button>
 </div>
       <!-- Self-contained info -->
-      <article class="destination-info">
-        <h1 class="fs-800 ff-serif txt-white uppercase">Moon</h1>
-        <p class="txt-accent">See our planet as you’ve never seen it before. A perfect relaxing trip away to help
-          regain perspective and come back refreshed. While you’re there, take in some history
-          by visiting the Luna 2 and Apollo 11 landing sites.</p>
-        <div class="destination-meta flex">
-          <div class="infopad">
-            <h1 class="ff-sans-cond fs-200 letter-spacing-3 txt-accent uppercase">Avg. distance</h1>
-            <p class="ff-serif uppercase">384,400 km</p>
-          </div>
-          <div class="infopad">
-            <h1 class="ff-sans-cond fs-200 letter-spacing-3 txt-accent uppercase">Est. travel time</h1>
-            <p class="ff-serif uppercase">3 days</p>
-          </div>
+     <!-- The moon -->
+     <article class="destination-info flow">
+      <h2 id="dest-name" class="fs-800 uppercase ff-serif">Moon</h2>
+
+      <p id="dest-desc">See our planet as you’ve never seen it before. A perfect relaxing trip away to help 
+      regain perspective and come back refreshed. While you’re there, take in some history 
+      by visiting the Luna 2 and Apollo 11 landing sites.</p>
+      
+      <div class="destination-meta flex">
+        <div>
+          <h3 class="text-accent fs-200 uppercase">Avg. distance</h3>
+          <p id="dest-dist" class="ff-serif uppercase">384,400 km</p>
         </div>
-      </article>
+        <div>
+          <h3 class="text-accent fs-200 uppercase">Est. travel time</h3>
+          <p id="dest-travtime" class="ff-serif uppercase">3 days</p>
+        </div>
+      </div>
+    </article>
   </main>
 
 </body>

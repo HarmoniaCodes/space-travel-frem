@@ -14,6 +14,7 @@
   <!-- Custom CSS-->
   <link rel="stylesheet" href="index.css">
   <script src="index.js" defer></script>
+  <script src="carousel.js"></script>
   <title>Frontend Mentor | Space tourism website</title>
 </head>
 
@@ -31,9 +32,9 @@
       <ul id="primary-navigation" data-visible="false" class="primary-navigation underline-indicators flex">
         <li><a class="ff-sans-cond uppercase txt-white letter-spacing-2" href="index.html"><span
               aria-hidden="true">00</span>Home</a>
-        <li><a class="ff-sans-cond uppercase txt-white letter-spacing-2" href="destination-moon.html"><span
+        <li><a class="ff-sans-cond uppercase txt-white letter-spacing-2" href="destination.html"><span
               aria-hidden="true">01</span>Destination</a>
-        <li class="active"><a class="ff-sans-cond uppercase txt-white letter-spacing-2" href="crew-commander.html"><span
+        <li class="active"><a class="ff-sans-cond uppercase txt-white letter-spacing-2" href="crew.html"><span
               aria-hidden="true">02</span>Crew</a>
         <li><a class="ff-sans-cond uppercase txt-white letter-spacing-2" href="#"><span
               aria-hidden="true">03</span>Technology</a>
@@ -44,24 +45,25 @@
     <!-- Header -->
       <h1 class="numbered-title"><span aria-hidden="true">02</span>Meet your crew</a></h1>
       <div class="dot-indicators">
-        <button aria-selected="true"><span class="sr-only">The commander</span></button>
-        <button aria-selected="false"><span class="sr-only">The mission specialist</span></button>
-        <button aria-selected="false"><span class="sr-only">The pilot</span></button>
-        <button aria-selected="false"><span class="sr-only">The crew engineer</span></button>
+        <button onclick="loadCommander()" aria-selected="true"><span class="sr-only">The commander</span></button>
+        <button onclick="loadSpecialist()" aria-selected="false"><span class="sr-only">The mission specialist</span></button>
+        <button onclick="loadPilot()" aria-selected="false"><span class="sr-only">The pilot</span></button>
+        <button onclick="loadEngineer()" aria-selected="false"><span class="sr-only">The crew engineer</span></button>
     </div>  
       <!-- Self-contained info -->
-      <article class="crew-info">
-          <h1 class="ff-serif txt-accent fs-600 uppercase">Commander</h1>
-          <h2 class="ff-serif txt-white fs-700 uppercase">Douglas Hurley</h2>
-        <p class="txt-accent">
+      <article class="crew-info flow">
+        <header class="flow flow--space-small">
+          <h1 id="crew-title" class="ff-serif aw-20 fs-600 uppercase">Commander</h1>
+          <p id="crew-name" class="ff-serif txt-white fs-600 uppercase">Douglas Hurley</p>
+        </header>
+        <p id="crew-bio" class="txt-accent">
           Douglas Gerald Hurley is an American engineer, former Marine Corps pilot 
           and former NASA astronaut. He launched into space for the third time as 
-          commander of Crew Dragon Demo-2.</p>      
-  
+          commander of Crew Dragon Demo-2.</p>   
       </article>
-      <img src="/starter-code/assets/crew/image-douglas-hurley.png" alt="Commander Douglas Hurley">
-  </main>
-
+      <picture id="crew-pic">
+        <source srcset="assets/crew/image-douglas-hurley.webp" type="image/webp">
+        <img src="assets/crew/image-douglas-hurley.png" alt="Commander Douglas Hurley">
+      </picture>
 </body>
-
 </html>
